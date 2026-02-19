@@ -261,6 +261,8 @@ section {
     cursor: default;
 }
 .image-banner{
+    display: flex;
+    justify-content: center;
     text-align: center;   
     position: relative;
 }
@@ -317,7 +319,7 @@ section {
 .image-banner .icons-banner .container-icon, .container-figure{
     position: absolute;
 }
-.image-banner .icons-banner .container-icon img, .container-figure img{
+.image-banner .icons-banner .container-icon p, .container-figure p{
     position: relative;
 }
 .image-banner .icons-banner .container-icon:nth-child(1){
@@ -325,8 +327,8 @@ section {
     right: 75%;
 }
 .image-banner .icons-banner .container-icon:nth-child(2){
-    top: 82%;
-    right: 43%;
+    top: 74%;
+    right: 22%;
 }
 .image-banner .icons-banner .container-icon:nth-child(3) {
     top: 52%;
@@ -334,38 +336,53 @@ section {
 }
 .image-banner .icons-banner .container-icon:nth-child(6){
     top: 30%;
-    right: 92%;
+    right: 66%;
 }
 .image-banner .icons-banner .container-icon:nth-child(5){
     top: 50%;
-    right: 87%;
+    right: 70%;
 }
 .image-banner .icons-banner .container-icon:nth-child(4){
-    top: 40%;
-    right: 34%;
+    top: 32%;
+    right: 10%;
 }
-.image-banner .icons-banner .container-icon:nth-child(3) img{
-    width: 70px;
-    height: 70px;
+.image-banner .icons-banner .container-icon:nth-child(3) p{
     animation: salto 0.8s infinite;
 }
-.image-banner .icons-banner .container-icon:nth-last-child(-n+2) img{
-    width: 30px;
-    height: 30px;
+.image-banner .icons-banner .container-icon:nth-last-child(-n+2) p{
     animation: salto 0.8s infinite;
 }
-.image-banner .icons-banner .container-icon:nth-child(4) img{
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    background-color: white;
-    border-radius: 100%;
+.image-banner .icons-banner .container-icon:nth-child(4) p{
     animation: salto 0.8s infinite;
 }
-.image-banner .icons-banner .container-icon:nth-child(-n+2) img{
-    width: 65px;
-    height: 65px;
+.image-banner .icons-banner .container-icon:nth-child(-n+2) p{
     animation: salto 0.8s infinite;
+}
+.icons-banner p{
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: var(--white-color);
+}
+.icons-banner .container-icon:nth-child(1) p{
+    background-color: #C637C5;
+}
+.icons-banner .container-icon:nth-child(2) p{
+    background-color: #7F34DD;
+}
+.icons-banner .container-icon:nth-child(3) p{
+    background-color: #5F38FA;
+}
+.icons-banner .container-icon:nth-child(4) p{
+    background-color: #D42A67;
+}
+.icons-banner .container-icon:nth-child(5) p{
+    background-color: #E7AE2D;
+}
+.icons-banner .container-icon:nth-child(6) p{
+    background-color: #c32c1b;
+}
+.img-banner-first{
+    width: 400px;
 }
 
 /* icon salto */
@@ -377,7 +394,7 @@ section {
 
 /* figures banner */
 .container-figure:nth-child(1){
-    top: 90%;
+    top: 75%;
     right: 90%;
 }
 .container-figure:nth-child(2){
@@ -394,6 +411,9 @@ section {
     height: 40px;
     animation: saltofig 2s infinite;
 }
+.figure-banner img{
+    position: relative;
+}
 
 /* icon salto */
 @keyframes saltofig{
@@ -401,7 +421,88 @@ section {
     30%  {right: -10px;}
 }
 
-/* For large devices */
+/*========== BUSINESS ==========*/
+.business-logos{
+    position: absolute;
+    top: 43rem;
+    margin-top: 2rem;
+    background: #000;
+    width: 93%;
+    overflow: hidden;
+}
+.scroll{
+    display: flex;
+    gap: 80px;
+    width: max-content;
+}
+.scroll img{
+    width: 100px;
+    height: 80px;
+    transition: .4s;
+}
+.scroll img:not(:hover){
+    filter: grayscale(100%);
+    opacity: .7;
+}
+.scroll img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/*========== SERVICES SCROLL ==========*/
+.services-section {
+  padding: 120px 0;
+}
+
+.services-inner {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+/* Texto sticky */
+.services-text {
+  width: 40%;
+  position: sticky;
+  top: 100px;  /* ajusta según tu header */
+}
+
+.services-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.services-text p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Cards movibles */
+.services-wrapper {
+  width: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  transform: translateY(0);
+}
+
+/* Card estilo */
+.service-card {
+  background: #ddd;
+  border-radius: 20px;
+  padding: 2rem;
+  color: #fff;
+}
+.service-card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+.purple { background: #4B2E83; }
+.pink   { background: #C72C77; }
+.green  { background: #7BA61D; }
+
 @media screen and (min-width: 1150px){
     /*========== HOME ==========*/
     .container{
@@ -432,7 +533,7 @@ section {
     }
     .nav__list{
         flex-direction: row;
-        column-gap: 4rem;
+        column-gap: 2rem;
     }
     .nav__link{
         color: var(--black-color);
