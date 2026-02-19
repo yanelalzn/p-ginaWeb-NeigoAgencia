@@ -1,154 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
-    <!--=============== REMIXICONS ===============-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="style.css">
-    <title>NEIGO AGENCIA</title>
-</head>
-<body>
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="" class="nav__logo">
-                <img src="img/logo.png" alt="logo">
-            </a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li>
-                        <a href="index.html#home" class="nav__link active-link">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="nosotros.html#project" class="nav__link">Nosotros</a>
-                    </li>
-                    <li>
-                        <a href="servicios.html#service" class="nav__link">Servicios</a>
-                    </li>
-                    <li>
-                        <a href="contacto.html#contact" class="nav__link">Contacto</a>
-                    </li>
-                </ul>
-                <!-- Close button -->
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
+        <!--=============== REMIXICONS ===============-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="style.css">
+        <title>NEIGO AGENCIA</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="" class="nav__logo">
+                    <img src="img/logo-go.svg" alt="logo">
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="index.html#home" class="nav__link active-link">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#service" class="nav__link">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="nosotros.html#project" class="nav__link">Proyectos</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html#contact" class="nav__link">Contacto</a>
+                        </li>
+                    </ul>
+                    <!-- Close button -->
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <div class="nav__buttons">
+                    <!-- Toggle button -->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--=============== MAIN ===============-->
+        <main class="main">
+            <section class="banner container" id="home">
+                <div class="inf-banner">
+                    <div class="inf-banner-title">
+                        <p>Hola, Somos</p>
+                        <p>Neigo Agencia.</p>
+                    </div>
+                    <div class="inf-banner-center">
+                        <h1>En el</h1>
+                        <h1>Mundo Digital</h1>
+                        <h1>si no estás,</h1>
+                        <h1>no existes...</h1>
+                    </div>
+                    <div class="button-banner flex hidden">
+                        <a href="">Contáctanos             
+                        <i class='bx bx-up-arrow-alt bx-flashing bx-rotate-90' style='color:#F01E28;'></i></a>
+                    </div>
+                </div>
+                <div class="image-banner hidden">
+                    <img class="img-banner-first" src="img/banner-resp.png" alt="">
+                    <div class="icons-banner">
+                        <div class="container-icon">
+                            <p>Páginas Web</p>
+                        </div>
+                        <div class="container-icon">
+                            <p>E-commerce</p>
+                        </div>
+                        <div class="container-icon">
+                            <p>Logos</p>
+                        </div>
+                        <div class="container-icon">
+                            <p>SEO</p>
+                        </div>
+                        <div class="container-icon">
+                            <p>Marketing Digital</p>
+                        </div>
+                        <div class="container-icon">
+                            <p>Diseño Gráfico</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="figure-banner">
+                    <div class="container-figure">
+                        <img src="img/direction.png" alt="">
+                    </div>
+                    <div class="container-figure">
+                        <img src="img/zigzag.png" alt="">
+                    </div>
+            </div>
+            <div class="business-logos">
+                <div class="scroll" id="logoScroll">
+                    <img src="img/client_01.png">
+                    <img src="img/client_03.png">
+                    <img src="img/client_06.png">
+                    <img src="img/client_07.png">
+                    <img src="img/client_08.png">
+                    <img src="img/client_09.png">
                 </div>
             </div>
-            <div class="nav__buttons">
-                <!-- Toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!--=============== MAIN ===============-->
-    <main class="main">
-        <section class="banner container">
-            <div class="inf-banner">
-                <div class="inf-banner-title">
-                    <p class="hidden-right">Hola, Somos</p>
-                    <p class="hidden-right">Neigo Agencia.</p>
-                </div>
-                <div class="inf-banner-center">
-                    <h1 class="hidden-right">En el</h1>
-                    <h1 class="hidden-right">Mundo Digital</h1>
-                    <h1 class="hidden-right">si no estás,</h1>
-                    <h1 class="hidden-right">no existes...</h1>
-                </div>
-                <div class="button-banner flex hidden">
-                    <a href="">Contáctanos             
-                    <i class='bx bx-up-arrow-alt bx-flashing bx-rotate-90' style='color:#F01E28;'></i></a>
-                </div>
-            </div>
-            <div class="image-banner hidden">
-                <img class="img-banner-first" src="img/banner-resp.png" alt="">
-                <div class="icons-banner">
-                    <div class="container-icon">
-                        <p>Páginas Web</p>
+            <!--=============== SERVICES SCROLL ===============-->
+            <section class="services-section" id="service">
+                <div class="services-container">
+                    <div class="services-text">
+                        <h2>Servicios de marketing digital orientados a resultados</h2>
+                        <p>
+                            En <strong>Onza, Agencia de marketing digital en Lima Perú</strong>, 
+                            entendemos que cada negocio tiene objetivos distintos; por eso desarrollamos 
+                            estrategias de marketing digital personalizadas para las necesidades de cada marca.
+                        </p>
                     </div>
-                    <div class="container-icon">
-                        <p>E-commerce</p>
-                    </div>
-                    <div class="container-icon">
-                        <p>Logos</p>
-                    </div>
-                    <div class="container-icon">
-                        <p>SEO</p>
-                    </div>
-                    <div class="container-icon">
-                        <p>Marketing Digital</p>
-                    </div>
-                    <div class="container-icon">
-                        <p>Diseño Gráfico</p>
+                    <div class="services-cards">
+                        <div class="card-serv card-purple">
+                            <img src="img/proj1.jpg" alt="Identidad de marca">
+                            <h3>Identidad de marca estratégica</h3>
+                            <p>Construimos marcas con identidad clara, coherente y alineada a los objetivos del negocio.</p>
+                        </div>
+                        <div class="card-serv card-pink">
+                            <img src="img/proj2.jpg" alt="Sitios corporativos">
+                            <h3>Sitios corporativos de alto impacto</h3>
+                            <p>Diseñamos sitios web estratégicos que comunican, conectan y convierten.</p>
+                        </div>
+                        <div class="card-serv card-green">
+                            <img src="img/proj2.jpg" alt="Ecommerce">
+                            <h3>Ecommerce y tiendas online</h3>
+                            <p>Desarrollamos tiendas en línea personalizadas que impulsan ventas y fidelizan clientes.</p>
+                        </div>
+                        <div class="card-serv card-blue">
+                            <img src="img/proj1.jpg" alt="Gestión digital">
+                            <h3>Gestión digital integral</h3>
+                            <p>Optimizamos la presencia digital mediante estrategias en redes sociales y marketing de contenido.</p>
+                        </div>
+                        <div class="card-serv card-red">
+                            <img src="img/proj2.jpg" alt="Gestión digital">
+                            <h3>Gestión digital integral</h3>
+                            <p>Optimizamos la presencia digital mediante estrategias en redes sociales y marketing de contenido.</p>
+                        </div>
+                        <div class="card-serv card-yellow">
+                            <img src="img/proj3.jpg" alt="Gestión digital">
+                            <h3>Gestión digital integral</h3>
+                            <p>Optimizamos la presencia digital mediante estrategias en redes sociales y marketing de contenido.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <div class="figure-banner">
-                <div class="container-figure">
-                    <img src="img/direction.png" alt="">
-                </div>
-                <div class="container-figure">
-                    <img src="img/zigzag.png" alt="">
-                </div>
-        </div>
-        <div class="business-logos">
-            <div class="scroll" id="logoScroll">
-                <img src="img/client_01.png">
-                <img src="img/client_03.png">
-                <img src="img/client_06.png">
-                <img src="img/client_07.png">
-                <img src="img/client_08.png">
-                <img src="img/client_09.png">
-            </div>
-        </div>
-        <!--=============== SERVICES SCROLL ===============-->
-        <section class="services-section">
-  <div class="services-inner">
+            </section>
+        </main>
 
-    <!-- TEXTO IZQUIERDO STICKY -->
-    <div class="services-text">
-      <h2>Servicios de marketing digital orientados a resultados</h2>
-      <p>
-        En Onza, Agencia de marketing digital en Lima Perú,
-        desarrollamos estrategias digitales personalizadas.
-      </p>
-    </div>
 
-    <!-- CONTENIDO MOVIBLE -->
-    <div class="services-wrapper" id="servicesWrapper">
-
-      <div class="service-card purple">
-        <img src="img/proj1.jpg" alt="">
-        <h3>Identidad de marca estratégica</h3>
-        <p>Construimos marcas con identidad clara.</p>
-      </div>
-
-      <div class="service-card pink">
-        <img src="img/proj2.jpg" alt="">
-        <h3>Sitios corporativos</h3>
-        <p>Webs estratégicas y efectivas.</p>
-      </div>
-
-      <div class="service-card green">
-        <img src="img/proj3.jpg" alt="">
-        <h3>E-commerce</h3>
-        <p>Tiendas online con enfoque en ventas.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-    </main>
-
-<script src="js/main.js"></script>
-</body>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=51942875386&text=Hola%20👋%20estoy%20interesado(a)%20en%20sus%20servicios."
+        class="whatsapp-float"
+        target="_blank">
+            <img src="img/whatsApps.png" alt="WhatsApp">
+        </a>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>

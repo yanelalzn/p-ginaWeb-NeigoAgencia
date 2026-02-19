@@ -54,26 +54,59 @@ window.addEventListener("load", () => {
     animate();
 });
 
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const bgHeader = () => {
+    const header = document.getElementById('header')
+    // Add a class if the bottom offset is greater than 50 of the viewport
+    this.scrollY >= 50 
+        ? header.classList.add('bg-header')
+        : header.classList.remove('bg-header')
+}
 
-/*========== SERVICES SCROLL ==========*/
-const wrapper = document.getElementById("servicesWrapper");
-const section = document.querySelector(".services-section");
+window.addEventListener('scroll', bgHeader)
 
-window.addEventListener("scroll", () => {
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
 
-  const scrollTop = window.scrollY;
-  const sectionTop = section.offsetTop;
-  const sectionHeight = section.offsetHeight;
+const scrollActive = () => {
+    const scrollDown = window.scrollY
 
-  if (scrollTop >= sectionTop && scrollTop <= sectionTop + sectionHeight) {
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-    // Progreso entre 0 y 1
-    let progress = (scrollTop - sectionTop) / (sectionHeight - window.innerHeight);
+        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+            sectionsClass.classList.add('active-link')
+        }else{
+            sectionsClass.classList.remove('active-link')
+        }
+    })
+}
 
-    // Ajusta cuánto quieres que se mueva
-    let moveY = progress * (wrapper.scrollHeight - window.innerHeight);
+window.addEventListener('scroll', scrollActive)
 
-    wrapper.style.transform = `translateY(-${moveY}px)`;
-  }
+/*=====================SHOW SCROLL UP====================*/
+const scrollUp = () =>{
+    const scrollUp = document.getElementById('scroll-up')
+    // When the scroll is higher than 350 viewport height, add the show-scroll class
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                        : scrollUp.classList.remove('show-scroll')
+}
 
+window.addEventListener('scroll', scrollUp)
+
+
+
+/*============= SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+  origin: "top",
+  distance: window.innerWidth < 768 ? "20px" : "30px",
+  duration: 500,
+  easing: "cubic-bezier(0.4, 0, 0.2, 1)",
+  reset: false
 });
+
+sr.reveal(".header", { delay: 300, origin: "top", distance: "20px" });

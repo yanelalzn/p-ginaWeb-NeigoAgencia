@@ -12,12 +12,12 @@
     --second-color: ;
     --title-color: ;
     --title-color-light: ;
-    --text-color: ;
+    --text-color: hsl(0,0%,33%,100%);
     --text-color-light: ;
     --white-color: hsl(0, 0%, 100%);
     --black-color:  hsl(0, 0%, 0%);
     --beige-color-light: ;
-    --red-color: #F01E28;
+    --red-color: hsl(357, 88%, 53%, 100%);
     --gray-color: ;
     --body-color: ;
 
@@ -133,9 +133,6 @@ section {
 .section__title span {
     font-weight: var(--font-regular);
 }
-.main {
-    overflow: hidden;
-}
 
 /*========== HEADER & NAV ==========*/
 .header{
@@ -143,11 +140,13 @@ section {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 15px 0;
     z-index: var(--z-fixed);
-    transition: background-color .4s, box-shadow .4s;
-    box-shadow: 0 10px 7px -15px;
-    background-image: linear-gradient(180deg, #29213938 0%, #FFFFFF00 100%);
+    transition: all .4s ease;
+    background: linear-gradient(rgba(41, 33, 57, 0.18), rgba(255,255,255,0));
+    transition: background-color .4s ease,
+            box-shadow .4s ease,
+            background-image .4s ease;
 }
 .nav{
     position: relative;
@@ -155,6 +154,24 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s;
+}
+.bg-header {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.bg-header .nav{
+    height: 3rem;
+}
+.bg-header :is(.nav__logo, .nav__toggle, .nav__contact, .ri-menu-line){
+    color: var(--black-color);
+}
+.bg-header .nav__link{
+    color: var(--white-color);
+}
+.bg-header .nav__logo img{
+    transform: scale(0.9);
+    transition: .3s;
 }
 .nav__logo img{
     height: 3.5rem;
@@ -175,6 +192,44 @@ section {
 }
 .nav__theme, .nav__buttons p{
     display: none;
+}
+/* Active link */
+
+.active-link{
+    color: var(--black-color) !important;
+}
+
+/* ========== WHATSAPP FLOAT ========== */
+.whatsapp-float{
+    position: fixed;
+    bottom: 1rem;
+    right: 1.4rem;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Imagen WSP */
+.whatsapp-float img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 30%;
+}
+.whatsapp-float:hover{
+    transform: translateY(-6px) scale(1.05);
+}
+@keyframes floatWsp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+.whatsapp-float{
+    animation: floatWsp 3s ease-in-out infinite;
 }
 
 /* Navigation for mobile devices */
@@ -223,7 +278,7 @@ section {
 /*--=============== SCROLL UP ===============*/
 .scrollup{
     position: fixed;
-    right: 2rem;
+    right: 2.5rem;
     bottom: -40%;
     background-color: var(--white-color);
     box-shadow: 0 8px 16px hsla(0, 0%, 0%, .1);
@@ -241,7 +296,7 @@ section {
 
 /* Show-scroll */
 .show-scroll{
-    bottom: 2rem;
+    bottom: 6rem;
 }
 
 /*--=============== BANNER ===============*/
@@ -259,6 +314,7 @@ section {
     flex-direction: column;
     gap: 10px;
     cursor: default;
+    padding-bottom: 8rem;
 }
 .image-banner{
     display: flex;
@@ -277,14 +333,14 @@ section {
 .inf-banner-title p:nth-child(2){
     font-size: 25px;
     transition-delay: 300ms;
-    color: #F01E28;
+    color: var(--red-color);
     font-weight: 700;
 }
 .inf-banner .inf-banner-center h1:nth-child(1){
     transition-delay: 100ms;
 }
 .inf-banner .inf-banner-center h1:nth-child(2){
-    color: #F01E28;
+    color: var(--red-color);
     font-weight: 700;
     transition-delay: 200ms;
 }
@@ -298,6 +354,7 @@ section {
     font-size: 60px;
     text-transform: uppercase;
     line-height: 60px;
+    color: var(--black-color);
 }
 .button-banner{
     display: flex;
@@ -311,7 +368,7 @@ section {
     font-size: 15px;
     text-transform: uppercase;
     color: black;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--black-color);
 }
 
 /* icons-banner */
@@ -324,27 +381,27 @@ section {
 }
 .image-banner .icons-banner .container-icon:nth-child(1){
     top: 12%;
-    right: 75%;
+    right: 52%;
 }
 .image-banner .icons-banner .container-icon:nth-child(2){
     top: 74%;
-    right: 22%;
+    right: 28%;
 }
 .image-banner .icons-banner .container-icon:nth-child(3) {
     top: 52%;
-    right: 22%;
+    right: 20%;
 }
 .image-banner .icons-banner .container-icon:nth-child(6){
     top: 30%;
     right: 66%;
 }
 .image-banner .icons-banner .container-icon:nth-child(5){
-    top: 50%;
-    right: 70%;
+    top: 56%;
+    right: 64%;
 }
 .image-banner .icons-banner .container-icon:nth-child(4){
     top: 32%;
-    right: 10%;
+    right: 24%;
 }
 .image-banner .icons-banner .container-icon:nth-child(3) p{
     animation: salto 0.8s infinite;
@@ -421,12 +478,13 @@ section {
     30%  {right: -10px;}
 }
 
+
 /*========== BUSINESS ==========*/
 .business-logos{
     position: absolute;
     top: 43rem;
     margin-top: 2rem;
-    background: #000;
+    background: var(--black-color);
     width: 93%;
     overflow: hidden;
 }
@@ -450,58 +508,68 @@ section {
 }
 
 /*========== SERVICES SCROLL ==========*/
+
 .services-section {
-  padding: 120px 0;
+    padding: 8rem 1.5rem;
 }
-
-.services-inner {
-  display: flex;
-  max-width: 1200px;
-  margin: auto;
-  gap: 40px;
+.services-container {
+    display: grid;
+    grid-template-columns: 400px 1fr; 
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
-
-/* Texto sticky */
 .services-text {
-  width: 40%;
-  position: sticky;
-  top: 100px;  /* ajusta según tu header */
+    position: sticky;
+    top: 120px;
+    align-self: start;
 }
-
 .services-text h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--red-color);
+    margin-bottom: 20px;
 }
 .services-text p {
-  line-height: 1.6;
-  font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card-serv {
+    padding: 25px;
+    border-radius: 12px;
+    color: var(--white-color);
+}
+.card-serv img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.card-serv h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.card-serv p {
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
-/* Cards movibles */
-.services-wrapper {
-  width: 60%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  transform: translateY(0);
-}
+/* Colores de fondo */
+.card-purple { background-color: #3f2c7a; }
+.card-pink   { background-color: #c22b84; }
+.card-green  { background-color: #7a9b00; }
+.card-blue   { background-color: #0b5ea8; }
+.card-red   { background-color: #BF4646; }
+.card-yellow   { background-color: #E7AE2D; }
 
-/* Card estilo */
-.service-card {
-  background: #ddd;
-  border-radius: 20px;
-  padding: 2rem;
-  color: #fff;
-}
-.service-card img {
-  width: 100%;
-  border-radius: 16px;
-  margin-bottom: 1rem;
-}
-.purple { background: #4B2E83; }
-.pink   { background: #C72C77; }
-.green  { background: #7BA61D; }
+
+
 
 @media screen and (min-width: 1150px){
     /*========== HOME ==========*/
@@ -546,6 +614,205 @@ section {
     }
     .bg-header .nav__link{
         color: var(--black-color);
-        font-weight: 600;
+    }
+    .bg-header .header{
+        background-color: var(--white-color)
+    }
+    .active-link{
+        color: var(--red-color) !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px){
+
+    /*========== BANNER ==========*/
+    .banner{
+        display: grid;
+        gap: 3rem;
+        padding-top: 7rem;
+    }
+    .inf-banner{
+        text-align: center;
+        padding: 0;
+        gap: 20px;
+    }
+    .inf-banner-title{
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+    }
+    .inf-banner h1{
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .inf-banner, .image-banner{
+        width: 100%;
+    }
+    .button-banner {
+        margin: auto;
+        width: auto;
+    }
+    .container-figure:nth-child(1){
+        top: 100%;
+        right: 80%;
+    }
+    .figure-banner img:nth-child(1) {
+        width: 80px !important;
+        height: 35px !important;
+    }
+    .container-figure:nth-child(2) {
+        top: 26%;
+        right: 4%;
+    }
+    .image-banner img{
+        width: 375px;
+    }
+    .business-logos{
+        position: initial;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(3){
+        right: 0%;
+    }   
+    .image-banner .icons-banner .container-icon:nth-child(2){
+        right: 15%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(1){
+        right: 51%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(6){
+        right: 63%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(5){
+        right: 59%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(4) {
+        right: 9%;
+    }
+
+    /* Logos empresas */
+
+    .scroll, .business-logos{
+        width: auto;
+    }
+
+    /*========== SERVICIOS ==========*/
+     .services-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .services-text {
+        position: relative;
+        top: auto;
+        margin-bottom: 2rem;
+    }
+    .services-section {
+        padding: 5rem 1.5rem;
+    }
+
+    /*========== WSP ==========*/
+    .whatsapp-float{
+        bottom: 0.5rem;
+        right: 0.4rem;
+    }
+    .scrollup{
+        right: 1rem;
+    }
+    .show-scroll {
+        bottom: 5rem;
+    }
+    .whatsapp-float{
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Mini tablet (iPad mini 768px) */
+@media (min-width: 768px) and (max-width: 819px) {
+    /*========== BANNER ==========*/
+    .banner {
+        flex-direction: column;
+    }
+    .inf-banner h1{
+        text-align: center;
+    }
+    .business-logos{
+        position: initial;
+    }
+    .inf-banner-title{
+        justify-content: center;
+    }
+    .inf-banner{
+        gap: 25px;
+        padding-bottom: 4rem;
+    }
+    .inf-banner, .image-banner {
+        width: 100%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(4){
+        right: 26%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(2){
+        right: 34%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(1) {
+        right: 49%;
+    }
+    .image-banner .icons-banner .container-icon:nth-child(5) {
+        right: 61%;
+    }
+
+    /*========== SERVICIOS ==========*/
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .services-text {
+        position: relative;
+        top: auto;
+        margin-bottom: 2rem;
+    }
+    .services-section {
+        padding: 5rem 1.5rem;
+    }
+    .services-text h2{
+        text-align: center;
+    }
+}
+
+/* Tablet grande (820px - 1024px) */
+@media (min-width: 820px) and (max-width: 1024px) {
+    /*========== BANNER ==========*/
+    .inf-banner h1{
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .business-logos{
+        width: 100%;
+    }
+    .container-figure:nth-child(2) {
+        top: 9%;
+    }
+    .container-figure:nth-child(1) {
+        top: 52%;
+    }
+    .img-banner-first {
+        width: 300px;
+    }
+    .inf-banner{
+        padding-bottom: 0;
+    }
+    /*========== SERVICIOS ==========*/
+    .services-section {
+        padding: 16rem 1.5rem;
+    }
+    .services-container {
+        grid-template-columns: 300px 1fr;
+    }
+    .services-text h2 {
+        font-size: 2rem;
+    }
+    .services-text p {
+        font-size: 1rem;
     }
 }
