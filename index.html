@@ -154,9 +154,60 @@
                     </div>
                 </div>
             </section>
+            <section class="metodologia">
+                <h2>Nuestra metodología en 3 pasos</h2>
+                <p class="sub">Te mostramos nuestra fórmula para tener más clientes.</p>
+                <div class="numbers-wrapper">
+                    <div class="line-segment"></div>
+                    <div class="line-segment"></div>
+                    <div class="line-segment"></div>
+                    <div class="number-row">
+                        <span class="number">1</span>
+                    </div>
+                    <div class="number-row">
+                        <span class="number">2</span>
+                    </div>
+                    <div class="number-row">
+                        <span class="number">3</span>
+                    </div>
+                </div>
+                <div class="pasos">
+                    <!-- PASO 1 -->
+                    <div class="paso">
+                        <div class="icono">
+                            <img src="img/1.svg" alt="Planifica">
+                        </div>
+                        <h3>Planifica</h3>
+                        <p>
+                            Te ayudamos a definir dónde estás, donde quieres llegar,
+                            con qué cuentas para llegar y juntos armamos el plan.
+                        </p>
+                    </div>
+                    <!-- PASO 2 -->
+                    <div class="paso">
+                        <div class="icono">
+                            <img src="img/2.svg" alt="Que te encuentren">
+                        </div>
+                        <h3>Que te encuentren</h3>
+                        <p>
+                            Hacemos que quienes ya tienen el problema,
+                            te encuentren como solución.
+                        </p>
+                    </div>
+                    <!-- PASO 3 -->
+                    <div class="paso">
+                        <div class="icono">
+                            <img src="img/3.svg" alt="Que te busquen">
+                        </div>
+                        <h3>Que te busquen</h3>
+                        <p>
+                            No hacemos que necesiten lo que vendes,
+                            hacemos que te necesiten a ti.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
-
-
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line"></i>
@@ -166,7 +217,27 @@
         target="_blank">
             <img src="img/whatsApps.png" alt="WhatsApp">
         </a>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/main.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="js/main.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const pasos = document.querySelectorAll(".paso");
+            const numbers = document.querySelectorAll(".number-row");
+            const segments = document.querySelectorAll(".line-segment");
+            const contenedorPasos = document.querySelector(".pasos");
+            pasos.forEach(function(paso, index) {
+                paso.addEventListener("mouseenter", function() {
+                    numbers.forEach(n => n.classList.remove("active"));
+                    segments.forEach(s => s.classList.remove("active"));
+                    numbers[index].classList.add("active");
+                    segments[index].classList.add("active");
+                });
+            });
+            contenedorPasos.addEventListener("mouseleave", function() {
+                numbers.forEach(n => n.classList.remove("active"));
+                segments.forEach(s => s.classList.remove("active"));
+            });
+        });
+        </script>
     </body>
 </html>
