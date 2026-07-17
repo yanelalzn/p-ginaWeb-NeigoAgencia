@@ -420,23 +420,14 @@ section {
     border-radius: 10px;
     color: var(--white-color);
 }
-.icons-banner .container-icon:nth-child(1) p{
-    background-color: #C637C5;
-}
-.icons-banner .container-icon:nth-child(2) p{
-    background-color: #7F34DD;
-}
-.icons-banner .container-icon:nth-child(3) p{
-    background-color: #5F38FA;
-}
-.icons-banner .container-icon:nth-child(4) p{
-    background-color: #D42A67;
-}
-.icons-banner .container-icon:nth-child(5) p{
-    background-color: #E7AE2D;
-}
-.icons-banner .container-icon:nth-child(6) p{
-    background-color: #c32c1b;
+.icons-banner .container-icon:nth-child(1) p,
+.icons-banner .container-icon:nth-child(2) p,
+.icons-banner .container-icon:nth-child(3) p,
+.icons-banner .container-icon:nth-child(4) p,
+.icons-banner .container-icon:nth-child(5) p,
+.icons-banner .container-icon:nth-child(6) p
+{
+    background-color: #000;
 }
 .img-banner-first{
     width: 400px;
@@ -485,7 +476,7 @@ section {
     top: 43rem;
     margin-top: 2rem;
     background: var(--black-color);
-    width: 93%;
+    width: 100%;
     overflow: hidden;
 }
 .scroll{
