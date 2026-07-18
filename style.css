@@ -17,7 +17,7 @@
     --white-color: hsl(0, 0%, 100%);
     --black-color:  hsl(0, 0%, 0%);
     --beige-color-light: ;
-    --red-color: hsl(357, 88%, 53%, 100%);
+    --red-color: hsl(1.67deg 100% 64.71%);
     --gray-color: ;
     --body-color: ;
 
@@ -157,7 +157,7 @@ section {
     transition: transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s;
 }
 .bg-header {
-    background: rgba(255,255,255,0.95);
+    background: #ffff;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 .bg-header .nav{
@@ -517,10 +517,10 @@ section {
 }
 .title-second-file a{
     font-size: 20px;
-    border-bottom: 1px solid #fe0000;
+    border-bottom: 1px solid var(--red-color);
 }
 .title-second-file a, .title-second-file i{
-    color: #fe0000;
+    color: var(--red-color);
 }
 .title-first-file{
     width: 60%;
@@ -534,12 +534,12 @@ section {
     transition-delay: 200ms;
 }
 .title-first-file h1:nth-child(2){
-    color: #F01E28;
+    color: var(--red-color);
     font-weight: 700;
     transition-delay: 300ms;
 }
 .title-first-file h1 > strong{
-    color: #F01E28;
+    color: var(--red-color);
     font-weight: 700;
 }
 .title-first-file p{
@@ -603,9 +603,10 @@ section {
     padding: 70px 30px 40px 20px;
     width: 30%;
     cursor: pointer;
+    transition: all .4s ease;
 }
 .servicio:hover{
-    background-color: #e0efe7;
+    background-color: var(--red-color);
 }
 .servicio img,
 .servicio h2,
@@ -656,7 +657,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 953px;
+    max-width: 985px;
     margin:auto;
 }
 .line-segment{
@@ -681,8 +682,8 @@ section {
 .line-segment.active{
     background: repeating-linear-gradient(
         to right,
-        #facc15 0px,
-        #facc15 6px,
+        var(--red-color) 0px,
+        var(--red-color) 6px,
         transparent 6px,
         transparent 12px
     );
@@ -703,7 +704,7 @@ section {
     transition: all .3s ease;
 }
 .number-row.active .number{
-    background:#facc15;
+    background: var(--red-color);
     border: none;
     color: var(--black-color);
 }
@@ -716,7 +717,7 @@ section {
     margin:0 auto 80px;
 }
 .paso{
-    max-width: 300px;
+    max-width: 260px;
 }
 .icono{
     width: 110px;
@@ -749,15 +750,20 @@ section {
 }
 
 /*========== PROYECTOS ==========*/
-.projects {
-    padding: 80px 5%;
-    background: #f7f7f7;
-}
+
 .section-title {
     font-size: 48px;
-    margin-bottom: 40px;
-    font-weight: 300;
+    font-weight: 600;
     color: var(--black-color);
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.section-title strong {
+    color: var(--red-color);
+    font-weight: 700;
 }
 .projects-container {
     display: grid;
@@ -801,9 +807,11 @@ section {
 .title-contacto{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+    margin: auto;
 }
 .title-contacto h1{
-    padding: 0 0 0 6rem;    
     font-size: 50px;
     text-transform: uppercase;
     line-height: 60px;
@@ -811,36 +819,33 @@ section {
 }
 .title-contacto p{
     width: 22%;
-    padding: 40px 30px 40px 20px;
+    padding: 40px 0 40px 20px;
     box-shadow: -12px 0px 7px -15px;
 }
 .title-contacto strong:nth-child(1){
-    color: #F01E28;
+    color: var(--red-color);
     font-weight: 700; 
 }
 .title-contacto .grey{
     color: #676666;
     font-weight: 700; 
 }
-.figure-cont{
-    text-align: center;
-    margin-top: -42px;
-    margin-bottom: 3rem;
-}
 .second-file-contact{
     background-color: #282828;
+}
+.sec-fil-contc{
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 5rem 0 2rem 0;
     cursor: default;
 }
 .img-contact{
     width: 42%;
     margin-top: -7rem;
-    padding-right: 60px;
 }
 .inf-contact{
-    padding-left: 2rem;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -866,11 +871,11 @@ section {
     font-weight: 100;
     line-height: 28px;
 }
-.inf-contact button{
+.inf-contact a{
     font-size: 20px;
     padding: 10px 60px;
     color: #fff;
-    background-color: #F01E28;
+    background-color: var(--red-color);
     border: none;
     width: max-content;
     display: flex;
@@ -878,7 +883,7 @@ section {
     gap: 10px;
     cursor: pointer;
 }
-.inf-contact button i{
+.inf-contact a i{
     font-size: 25px;
 }
 
@@ -946,7 +951,7 @@ section {
     color: white !important;
 }
 .input-large b, .name b{
-    color: #fe0000;
+    color: var(--red-color);
 }
 .contacto textarea{
     height: 150px;
@@ -984,7 +989,7 @@ section {
     position: absolute;
     height: 107%;
     width: 98%;
-    background-color: #F01E28;
+    background-color: var(--red-color);
     z-index: -1;
     transition: 0.9s;
 }
@@ -1037,10 +1042,12 @@ footer{
     background-color: #F0F0F0;
 }
 .logo-footer{
-    padding: 50px 0 50px 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 0;
 }
 .logo-footer img{
-    width: 155px;
+    width: auto;
     height: 70px;
     cursor: pointer;
 }
@@ -1048,8 +1055,10 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0 30px 50px;
+    padding: 30px 0 30px;
     box-shadow: 0px -10px 7px -14px;
+    max-width: 1200px;
+    margin: auto;
 }
 .derechos-footer{
     display: flex;
@@ -1062,7 +1071,6 @@ footer{
 .redes-footer{
     display: flex;
     gap: 15px;
-    padding: 0 50px 0 0;
 }
 .redes-footer img{
     width: 30px;
@@ -1206,6 +1214,17 @@ footer{
         grid-template-columns: 1fr;
         gap: 0;
     }
+    .title-service{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .title-first-file h1:nth-child(1){
+        margin-bottom: 10px;
+    }
+    .figures-service img:nth-child(2){
+        top: 63%;
+    }
     .services-text {
         position: relative;
         top: auto;
@@ -1213,6 +1232,33 @@ footer{
     }
     .services-section {
         padding: 5rem 1.5rem;
+    }
+    .title-first-file{
+        width: 100%;
+        padding: 0 0 0 1rem;
+    }
+    .paraph-service{
+        padding: 50px 0 0 0;
+        justify-content: center;
+    }
+    .paraph-service p{
+        padding: 20px 0 20px 16px;
+    }
+    .ave{
+        padding: 0 0 40px 20px;
+    }
+    .tips-services{
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        z-index: 80;
+    }
+    .servicio{
+        width: 90%;
+    }
+    .servicio h2{
+        font-size: 40px;
     }
 
     /*========== METODOLOGIA ==========*/
@@ -1232,15 +1278,16 @@ footer{
     }
     .numbers-wrapper{
         position: relative;
+        margin-top: 1rem;
     }
     .numbers-wrapper::before{
         content:"";
         position:absolute;
         left:28px;
-        top:0;
+        top:2rem;
         width:2px;
         height:70%;
-        border-left:2px dashed #facc15; /* Amarilla directa */
+        border-left:2px dashed var(--red-color); /* Amarilla directa */
     }
     .numbers-wrapper::after{
         display:none;
@@ -1249,7 +1296,7 @@ footer{
         display: none;
     }
     .number{
-        background: #facc15;
+        background: var(--red-color);
         border: none;
     }
     .icono img {
@@ -1278,6 +1325,89 @@ footer{
     }
     .projects {
         padding: 50px 5%;
+    }
+
+
+    /*========== CONTACTO ==========*/
+
+    .contacto{
+        margin-top: 3rem;
+    }
+    .title-contacto{
+        flex-direction: column;
+    }
+    .title-contacto h1{
+        width: 90%;
+        padding: 0 0 0 1rem;
+        font-size: 38px;
+        line-height: normal;
+    }
+    .title-contacto p{
+        width: 100%;
+        padding: 40px 0 40px 20px;    
+    }
+    .figure-cont {
+        text-align: start;
+        margin: 2rem 0 2rem 1rem;
+    }
+    .inf-contact{
+        width: 95%;
+    }
+    .img-contact{
+        width: 100%;
+        padding-right: 0;
+        margin-top: 3rem; 
+        text-align: center;   
+    }
+    .second-file-contact .img-contact img {
+        width: 90%;
+        height: 400px;
+        margin: auto;
+    }
+    .inf-contact-down{
+        flex-direction: column;
+        align-items: center;
+    }
+    .inf-contact-down p {
+        padding: 15px 0;
+    }
+    .formulario-contacto{
+        width: 100%;
+    }
+    .contacto form{
+        margin-top: 6rem;
+    }
+    .sec-fil-contc{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* footer */
+
+    .footer-down{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 30px 0 30px 0;
+    }
+    .derechos-footer{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .derechos-footer p{
+        text-align: center;
+    }
+    .redes-footer {
+        display: flex;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .logo-footer {
+        text-align: center;
+        margin-inline: 1.5rem;
+    }
+    .partner{
+        padding: 0;
     }
 
     /*========== WSP ==========*/
@@ -1348,7 +1478,22 @@ footer{
     .services-text h2{
         text-align: center;
     }
-
+    .title-service{
+        max-width: 700px;
+    }
+    .paraph-service{
+        justify-content: start;
+        padding: 20px 0;
+    }
+    .tips-services{
+        padding: 0;
+        position: relative;
+        z-index: 80px;
+    }
+    .servicio{
+        width: 45%;
+    }
+        
     /*========== METODOLOGIA ==========*/
     .pasos{
         margin-bottom: 0;
@@ -1357,6 +1502,11 @@ footer{
     /*========== PROJECTOS ==========*/
     .projects-container {
         grid-template-columns: 1fr 1fr;
+    }
+
+    /*========== CONTACTO ==========*/
+    .sec-fil-contc, .logo-footer, .title-contacto{
+        max-width: 700px;
     }
 }
 
@@ -1394,5 +1544,17 @@ footer{
     }
     .services-text p {
         font-size: 1rem;
+    }
+    .title-service{
+        max-width: 900px;
+    }
+
+    .numbers-wrapper{
+        max-width: 780px;
+    }
+
+    /*========== CONTACTO ==========*/
+    .sec-fil-contc, .logo-footer, .title-contacto{
+        max-width: 900px;
     }
 }
